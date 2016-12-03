@@ -37,7 +37,7 @@ class Scraping
         $stream = fopen('php://output', 'w');
         fputcsv($stream, $csv_header);
         //*/
-        for ($i = 0; $i < $pages; $i++) {
+        for ($i = 957; $i <= $pages; $i++) {
             $dom = (in_array($i, [0, 1])) ? $this->getDom($this->url) : $this->getDom($this->url. "?p=". $i);
             //$this->putCsv($dom, $stream);
             $this->putText($dom);
